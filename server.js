@@ -1,14 +1,3 @@
-const http = require('http');
-const express = require('express');
-const app = express();
-app.get("/", (request, response) => {
-    response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-    http.get(`http://name.glitch.me/`); /// حط اسم المشروع تبعك name تعديل مهم بدل
-}, 280000);
-
 // بكجات
 const Discord = require("discord.js");
 const {
@@ -158,7 +147,7 @@ client.on("message", async message => {
             .split(" ")
             .slice(1)
             .join(" ");
-        if (!message.author.id === "696338291229982820") return; ///تعديل مهم حط الايدي تبعك
+        if (!message.author.id === "693810415641034753") return; ///تعديل مهم حط الايدي تبعك
         client.user.setUsername(args);
         message.channel.send(`تم تغيير الاسم الى ..**${args}** `);
     } else if (message.content.startsWith(prefix + "setavatar")) {
@@ -166,7 +155,7 @@ client.on("message", async message => {
             .split(" ")
             .slice(1)
             .join(" ");
-        if (!message.author.id === "696338291229982820") return; /// تعديل مهم حط الايدي تبعك
+        if (!message.author.id === "693810415641034753") return; /// تعديل مهم حط الايدي تبعك
         client.user.setAvatar(args).catch(err => message.reply("send a valid url"));
         message.channel.send(`تم تغيير الصورة الى :**${args}** `);
     }
